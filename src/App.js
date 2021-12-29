@@ -4,13 +4,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App container">
+    <div className="App">
       <Weather defaultCity="New York" />
-      <footer>
-        This project was coded by{" "}
-        <a href="#">Shayna Stewart</a>
-        {" "}and is {" "}
-        <a href="#">open sourced on GitHub</a>
+      <footer className="container">
+        This project was coded by Shayna Stewart and is {" "}
+        <a href="https://github.com/5h8YN8/react-weather-app-2">open sourced on GitHub</a>
       </footer>
     </div>
   );

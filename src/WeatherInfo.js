@@ -13,7 +13,7 @@ export default function WeatherInfo (props) {
         </ul>
     <div className="row crt-tmp">
         <div className="col-6">
-            <WeatherIcon iconData={props.data.icon}/>
+            <WeatherIcon iconData={props.data.icon} size={64}/>
             <Temperature celcius={props.data.temperature} />
         </div>
         <div className="col-6">

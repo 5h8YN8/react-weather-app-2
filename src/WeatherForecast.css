@@ -1,0 +1,14 @@
+.WeatherForecast {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.WeatherForecast-min {
+    opacity: .6;
+    font-size: 15px;
+}
+
+.WeatherForecast canvas {
+    padding:0;
+    margin:0;
+}

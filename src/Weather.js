@@ -18,7 +18,7 @@ function handleResponse (response){
     temperature: (response.data.main.temp),
     wind: (response.data.wind.speed),
     desc: (response.data.weather[0].description),
-    icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    icon: (response.data.weather[0].icon)
     });
     
 }

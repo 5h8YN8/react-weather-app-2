@@ -9,7 +9,6 @@ let [city, setCity] =useState(props.defaultCity);
 const[weatherData,setWeatherData]=useState({ready:false});
 
 function handleResponse (response){
-    console.log(response);
     setWeatherData({
     ready: true,
     time: new Date(response.data.dt * 1000),

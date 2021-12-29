@@ -10,15 +10,25 @@ export default function WeatherForecast(props){
 
     function apiComplete (){
         setLoaded("true");
-
     }
+
     function handleResponse (response){
         setForecastData(response.data.daily);
         apiComplete();
     }
 if (loaded==="true"){
  return (
- <WeatherForecastDay data={forecastData} />
+<div className="WeatherForecast">
+<div className="row">
+        {forecastData.map(function(dailyForecast,index){
+    if (index <6){
+        return(
+        <div className="col" key={index}>
+             <WeatherForecastDay data={dailyForecast} />
+        </div>);}
+})}
+</div>
+</div>
 );}
 else {
     let  apiKey="f9d6c217fdb897f27b6e330e8c371a9d";

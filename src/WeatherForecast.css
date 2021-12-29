@@ -1,11 +1,12 @@
 .WeatherForecast {
     text-align: center;
     margin-top: 10px;
+    font-size: 15px;
 }
 
 .WeatherForecast-min {
     opacity: .6;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .WeatherForecast canvas {

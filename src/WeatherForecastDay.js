@@ -4,33 +4,30 @@ import WeatherIcon from "./WeatherIcon";
 export default function WeatherForecastDay (props){
 console.log(props);
 function day (){
-    let date = new Date (props.data[0].dt*1000);
+    let date = new Date (props.data.dt*1000);
     let day = date.getDay();
-    let days = ["Sun","Mon","Tue","Thu","Fri","Sat,"];
+    let days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
     return (days[day]);
 }
 function maxTemp (){
-    let max= Math.round(props.data[0].temp.max);
+    let max= Math.round(props.data.temp.max);
     return `${max}°`;
     }
 function minTemp (){
-    let min= Math.round(props.data[0].temp.min);
+    let min= Math.round(props.data.temp.min);
     return `${min}°`;
     }
 
 function getIcon (){
-    return props.data[0].weather[0].icon;
+    return props.data.weather[0].icon;
 }
 
 return (
-    <div className="WeatherForecast">
-        <div className="col">
-        <div className="row">
-            <div className="WeatherForecast-day">{day()}</div>
-            <div><WeatherIcon iconData={getIcon()} size={32}/></div>
-            <div><span className="WeatherForecast-max">{maxTemp()}</span> <span className="WeatherForecast-min">{minTemp ()}</span></div>
-        </div>
-        </div>
+     <div>
+        <div className="WeatherForecast-day">{day()}</div>
+        <div><WeatherIcon iconData={getIcon()} size={32}/></div>
+        <div><span className="WeatherForecast-max">{maxTemp()}</span> <span className="WeatherForecast-min">{minTemp ()}</span></div>
     </div>
+  
 );
 }
